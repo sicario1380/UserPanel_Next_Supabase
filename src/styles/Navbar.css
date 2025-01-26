@@ -1,0 +1,154 @@
+/* Navbar.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar.expanded {
+  grid-template-columns: 16rem 1fr; /* Default size for expanded */
+}
+
+.navbar-item {
+  @apply relative flex items-center justify-center transition-colors duration-300; /* Core layout and transitions */
+  width: 3.5vw; /* Explicit width */
+  height: 5vw; /* Explicit height */
+  left: 45%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  background-color: #2caac0; /* Explicit background color */
+  box-shadow: 8px 8px 40px rgba(111, 55, 103, 0.33); /* Explicit shadow */
+  border-radius: 1000px; /* Explicit rounded corners */
+  margin-left: 8%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-item button {
+  left: 0.4vw;
+  top: 0.5vw;
+  width: 36%;
+  height: 36%;
+}
+
+.menu {
+  top: 1vh;
+  right: 1vh;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 80vw;
+  position: fixed;
+  left: 9%;
+  top: 14vh;
+}
+
+.navbar-item.hovered {
+  background-color: rgba(41, 118, 132, 0.62);
+}
+
+.navbar-item.selected {
+  background-color: rgba(41, 118, 132, 1);
+  color: #ffffff;
+}
+
+.navbar-item:hover img {
+  transform: scale(1.1); /* Scale image on hover */
+}
+
+@layer base {
+  .bg-navbarBackground {
+    background-color: #2caac0;
+  }
+}
+
+.items {
+  display: grid;
+  flex-wrap: wrap; /* Allow wrapping of items */
+  grid-template-columns: 1fr 1fr;
+  gap: 4% 2%;
+  width: 70vw;
+  margin-left: 10%;
+}
+
+.widget {
+  @apply bg-white relative rounded-lg shadow-md flex justify-center;
+  background-color: rgba(25, 59, 172, 0.08);
+  height: 30vh;
+  border-image: stretch;
+  overflow: hidden;
+  transition: background-color 0.3s ease; /* Transition for background color */
+}
+
+.widget img {
+  @apply h-auto rounded-lg;
+  width: 95%; /* Make the image full width */
+  height: 95%; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the container while preserving aspect ratio */
+  position: absolute; /* Positioning to allow cropping */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease, filter 0.3s ease; /* Transition for zoom and filter */
+}
+
+.widget:hover img {
+  transform: translate(-50%, -50%) scale(1.1); /* Zoom in on hover */
+  filter: brightness(0.8); /* Darken the image on hover */
+}
+
+.widget > span {
+  font-size: 28px;
+  position: absolute;
+  bottom: 6%;
+  color: #9e9e9e;
+  transition: color 0.3s ease; /* Transition for text color */
+}
+
+.widget:hover > span {
+  color: #ffffff; /* Change text color to white on hover */
+}
+
+#widget-wallet {
+  width: 124%;
+  margin-left: -24%;
+}
+
+#widget-courses {
+  width: 78%;
+}
+
+#widget-certificates {
+  height: 36vh;
+}
+
+#widget-statistics {
+  height: auto;
+  background: none;
+  box-shadow: none;
+}
+
+#widget-statistics > img {
+  height: 44vh;
+  background: none;
+  border-radius: 40px;
+}
+
+.dropdown {
+  position: absolute; /* Position relative to the navbar */
+  background-color: white; /* Background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px; /* Shadow effect */
+  bottom: 0;
+  right: -4.5rem;
+  background-color: rgba(41, 118, 132, 1);
+}
+
+.dropdown-item {
+  padding: 5px; /* Padding for items */
+  color: #dbdbdb;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Hover effect */
+  cursor: pointer; /* Pointer cursor */
+}

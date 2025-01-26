@@ -1,0 +1,47 @@
+/* Example CSS (adjust to your design) */
+.ticket-history-container {
+  padding: 20px;
+}
+
+.ticket-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.ticket-table th,
+.ticket-table td {
+  border: 1px solid #ddd; /* Light gray borders */
+  padding: 8px;
+  text-align: left;
+}
+
+.ticket-table th {
+  background-color: #f2f2f2; /* Light gray header background */
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* Center the pagination */
+  gap: 5px; /* Add space between buttons */
+}
+
+.pagination button {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.pagination .active-page {
+  background-color: #007bff; /* Blue background for active page */
+  color: white;
+  border-color: #007bff;
+}
+
+.awaiting {
+  color: orange;
+}
+.closed {
+  color: green;
+}

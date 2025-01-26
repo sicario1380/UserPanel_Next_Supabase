@@ -1,0 +1,80 @@
+/* ticket.css */
+
+/* General styles for the create ticket page */
+.create-ticket {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+  
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2caac0;
+  }
+  
+  .main-section {
+    margin-left: 80px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .main-section h1 {
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  input[type="file"],
+  input[type="text"],
+  select,
+  textarea {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    background-color: #2caac0;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Add hover effects for better UX */
+  button:hover {
+    background-color: #218a98;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+      height: 60px;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  
+    .main-section {
+      margin-left: 0;
+      padding-top: 1rem;
+    }
+  }
+  
