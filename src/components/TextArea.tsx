@@ -6,7 +6,7 @@ interface TextAreaProps
   extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   className?: string;
   label?: string;
-  id?: string; // Add id prop
+  id?: string;
 }
 
 const TextArea: React.FC<TextAreaProps> = ({
